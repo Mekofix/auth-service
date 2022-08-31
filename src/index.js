@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 4000
 const cors = require('cors')
 const router = require('./routes/index')
 const swaggerUi = require("swagger-ui-express")
-const swaggerFile = require("./swagger_output.json")
+const swaggerFile = require("../swagger_output.json")
 
 const app = express()
 

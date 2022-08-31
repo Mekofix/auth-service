@@ -1,0 +1,102 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Mekofix Authentication service",
+    "description": "Auto Documenting APIS with Swagger documentation"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "tags": [
+    "Authentication",
+    "Rate Limiter"
+  ],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/signin": {
+      "post": {
+        "tags": [
+          "Vendors"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/signup": {
+      "post": {
+        "tags": [
+          "Vendors"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/resetpassword": {
+      "put": {
+        "tags": [
+          "Vendors"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "TechinicianModel": {
+      "type": "object",
+      "properties": {
+        "firstname": {
+          "type": "string",
+          "example": "John"
+        },
+        "lastname": {
+          "type": "string",
+          "example": "Samuel"
+        },
+        "middlename": {
+          "type": "string",
+          "example": "Daniel"
+        },
+        "email": {
+          "type": "string",
+          "example": "JohnSam@gmail.com"
+        },
+        "phoneNumber": {
+          "type": "string",
+          "example": "09012345678"
+        }
+      },
+      "required": [
+        "firstname",
+        "lastname",
+        "middlename",
+        "email",
+        "phoneNumber"
+      ]
+    }
+  }
+}
