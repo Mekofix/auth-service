@@ -1,0 +1,32 @@
+version: '3.8'
+
+
+services:
+  meko-auth:
+    container_name: meko-auth
+    image: meko-auth:0.0.7
+    build: 
+      context:  .
+    ports:
+      - "4000:4000"
+    environment:
+      - PORT=4000
+      - PGPASSWORD=meko-auth-2022
+      - PGUSER=meko-admin
+      - PGDATABASE=meko-auth-service
+      - PGHOST=meko-auth-db
+    depends_on:
+      - meko-auth-db
+  meko-auth-db:
+    container_name: meko-auth-db
+    image: postgres:13
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=meko-auth-2022
+      - POSTGRES_USER=meko-admin
+      - POSTGRES_DB=meko-auth-service
+    volumes:
+      - db-data:/var/lib/postgresql/data
+volumes:
+  db-data: {}
